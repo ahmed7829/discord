@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="header">
+            <h1>الفرصه الأخيره لتسجيل</h1>
+            <p>للحصول على رقم لا تتخيله من الكريدت عليك تسجيل الدخول و اجتياز التحدي</p>
+        </div>
+        <!-- تعديل الـ form -->
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">كلمة المرور</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="تسجيل الدخول">
+            </div>
+        </form>
+        <div class="footer">
+            بالمتابعة، فإنك توافق على <a href="#">شروط الخدمة</a> و <a href="#">سياسة الخصوصية</a>.
+        </div>
+    </div>
+    <div class="mouse-effect" id="mouseEffect"></div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إرسال الـ form
+            window.location.href = 'thank_you.html'; // توجيه المستخدم إلى صفحة الشكر
+        });
+    </script>
+</body>
+</html>
